@@ -1,8 +1,9 @@
-//1-On déclare deux varaiables, firstCard et secondCard
-//On défini leur valeur par un numéro au hasard entre 2 et 11
 let player = {
-    name: "Per";
+    name: "Per",
+    chips: 200,
 }
+    //1-On déclare deux varaiables, firstCard et secondCard
+//On défini leur valeur par un numéro au hasard entre 2 et 11
 let cards = [] //array
 
 //3-On crée une variable, sum, qui nous permet d'additionner les deux cartes
@@ -20,18 +21,13 @@ let messageEl = document.getElementById("message-el")
 //let sumEl = document.getElementById ("sum-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
-
-let player = {
-     name: "Per",
-     chips: 145
-}
-
 let playerEl = document.getElementById("player-el")
+
 playerEl.textContent = player.name + ": $" + player.chips
 
 //On crée la fonction qui permet de générer une carte aléatoire
 function getRandomCard() {
-    let randomNumber = Math.floor ( Math.randomNumber()*13) + 1
+    let randomNumber = Math.floor ( Math.random()*13) + 1
     if (randomNumber > 10) {
         return 10
     } else if (randomNumber === 1) {
